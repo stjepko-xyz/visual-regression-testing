@@ -30,12 +30,14 @@ export default defineConfig({
       })],
       test: {
         name: 'storybook',
+        setupFiles: ['./.storybook/vitest.setup.ts'],
         browser: {
           enabled: true,
           headless: true,
           provider: playwright({}),
           instances: [{
-            browser: 'chromium'
+            browser: 'chromium',
+            viewport: { width: 1024, height: 768 }
           }]
         }
       }

@@ -11,7 +11,11 @@
     "typecheck": "tsc --noEmit",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test:visual": "vitest run --project=storybook",  
+    "test:visual:update": "vitest run --project=storybook --update",
+    "test:visual:report": "vitest run --project=storybook --reporter=default --reporter=html",
+    "test:visual:show-report": "vite preview --outDir .vitest --open"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

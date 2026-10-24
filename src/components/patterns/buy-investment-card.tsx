@@ -49,7 +49,7 @@ const ORDER_TYPES = [
 
 const currency = new Intl.NumberFormat("en-US", {
   style: "currency",
-  currency: "USD",
+  currency: "USF",
 })
 
 type BuyInvestmentCardProps = {
