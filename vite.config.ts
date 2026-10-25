@@ -35,6 +35,12 @@ export default defineConfig({
           enabled: true,
           headless: true,
           provider: playwright({}),
+          expect: {
+            toMatchScreenshot: {
+              resolveScreenshotPath: ({ arg, browserName, platform, ext }) =>
+                path.join(dirname, 'tests/visual/__screenshots__', `${arg}-${browserName}-${platform}${ext}`)
+            }
+          },
           instances: [{
             browser: 'chromium',
             viewport: { width: 1024, height: 768 }
