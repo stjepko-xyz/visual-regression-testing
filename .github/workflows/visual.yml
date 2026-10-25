@@ -26,4 +26,6 @@ jobs:
         with:
           name: visual-report
           path: .vitest
-          if-no-files-found: ignore
+          # .vitest is a hidden folder, which upload-artifact@v4 skips by default
+          include-hidden-files: true
+          if-no-files-found: warn
