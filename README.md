@@ -22,7 +22,9 @@ Other scripts:
 
 ## Reports and failures
 
-When a comparison fails, the report shows the baseline, actual and diff images for that story. The images are also written to `.vitest/attachments/`.
+https://github.com/user-attachments/assets/9c063eb0-b5d2-425a-8efe-8cc06a3beea1
+
+In the demo video above you can see that the test detected a missing 'half' button. When a comparison fails, the report shows the baseline, actual and diff images for that story. The images are also written to `.vitest/attachments/`.
 
 In CI (`.github/workflows/visual.yml`) the `.vitest` folder is uploaded as the `visual-report` artifact. To view a downloaded report, unzip it and serve the folder (opening `index.html` directly doesn't work, because browsers block the report's requests on `file://` pages):
 
