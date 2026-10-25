@@ -11,6 +11,12 @@ const preview: Preview = {
     if (parameters.layout !== "padded" && parameters.layout !== "fullscreen") {
       canvasElement.style.width = "fit-content"
     }
+
+    // The Storybook UI reuses the same root between stories, so don't let the
+    // width leak into the next one.
+    return () => {
+      canvasElement.style.width = ""
+    }
   },
 
   parameters: {
