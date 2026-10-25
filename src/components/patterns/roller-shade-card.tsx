@@ -12,7 +12,7 @@ import { Slider } from "@/components/ui/slider"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 
 const PRESETS = [
-  // { value: "open", label: "Open", position: 0 },
+  { value: "open", label: "Open", position: 0 },
   { value: "half", label: "Half", position: 50 },
   { value: "closed", label: "Closed", position: 100 },
 ]
